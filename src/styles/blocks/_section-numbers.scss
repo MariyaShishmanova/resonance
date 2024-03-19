@@ -1,0 +1,64 @@
+.section-numbers {
+  padding-block: 120px;
+
+  @include media(down, $tablet) {
+    padding-block: 70px;
+  }
+
+  &.bg-image {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:before {
+      background-color: rgba($color-black, 0.9);
+    }
+  }
+
+  &__inner {
+    @include media(up, $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__body {
+    flex-basis: 31.7829%;
+  }
+
+  &__title {
+    color: $color-white;
+    margin-block-end: 20px;
+  }
+
+  &__entry {
+    margin-block-end: 40px;
+  }
+
+  &__actions {
+    @include media(down, $tablet) {
+      margin-block-end: 50px;
+    }
+  }
+
+  &__boxes {
+    @include media(up, $mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 39.3024%);
+      gap: 30px;
+      justify-content: space-between;
+      flex-basis: 57.3643%;
+    }
+  }
+
+  &__box + &__box {
+    @include media(down, $mobile) {
+      margin-block-start: 30px;
+    }
+  }
+
+  &__box-head {
+    font-size: clamp($numbers-font-size-mobile, 6vw, $numbers-font-size);
+    line-height: 1;
+    margin-block-end: 10px;
+  }
+}

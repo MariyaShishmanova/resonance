@@ -1,0 +1,55 @@
+.link {
+  color: $color-black;
+  font-weight: 500;
+  display: flex;
+  font-size: $link-font-size;
+
+  &.link-hover-anim {
+    position: relative;
+    overflow: hidden;
+
+    .link-el {
+      transition: transform $trs1 $transition-timing-function,
+      opacity $trs1 $transition-timing-function;
+      display: inline-block;
+      overflow: hidden;
+
+      &.link-el--unvisible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(150%) translateZ(0.001px) skewY(10deg);
+      }
+    }
+
+    &:hover {
+      .link-el--visible {
+        opacity: 0;
+        transform: translateY(-150%) translateZ(0.001px) skewY(-10deg);
+      }
+  
+      .link-el--unvisible {
+        opacity: 1;
+        transform: translateY(0) translateZ(0.001px) skewY(0);
+      }
+    }
+  }
+
+
+  &-video {
+    position: relative;
+    padding-inline-start: 20px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 6px;
+    }
+  }
+}

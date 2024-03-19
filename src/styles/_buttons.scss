@@ -1,0 +1,117 @@
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  font-size: $buttons-mobile-font-size;
+  font-weight: 700;
+  outline: inherit;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+  padding: 16px 32px 15px;
+
+
+  &-dark {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &.btn-hover-anim {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid $color-black;
+
+    span {
+      position: relative;
+    }
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.7) translateY(55%);
+      background-color: $color-mine-shaft;
+      border-radius: 100%;
+      transition: transform $trs cubic-bezier(0, 0, 0.31, 0.99);
+    }
+
+    &:hover {
+      border-color: $color-mine-shaft;
+
+      &:before {
+        transform: scaleX(2) scaleY(1) translateY(-15%);
+      }
+    }
+  }
+
+  &-light {
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  &-light.btn-hover-anim {
+    &:before {
+      background-color: $color-alto;
+    }
+  }
+
+  &-nav {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 20px;
+
+    @include media(down, $tablet) {
+      display: block;
+    }
+
+    &.active {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:before {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+
+      span:after {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:before,
+    &:after,
+    span:after {
+      content: '';
+      // background-color: $color-outer-space;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: block;
+      left: 0;
+      transition-property: opacity, visibility, transform, top;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      top: 6px;
+    }
+
+    span:after {
+      top: 12px;
+    }
+  }
+}

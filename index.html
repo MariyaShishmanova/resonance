@@ -1,13 +1,441 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <!-- animate css- animation library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/12295fb21b.js" crossorigin="anonymous"></script>
+  <title>Resonance</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <div class="page-content">
+    <section class="section section-hero bg-image">
+      <div class="container">
+        <div class="section-hero__inner">
+          <div class="section-hero__text">
+            <div class="section-hero__head">
+              <h4 class="section__subtitle section-hero__subtitle wow animate__animated animate__fadeInUp"
+                data-wow-duration="1.2s">
+                RESONANCE CREATIVE STUDIO
+              </h4>
+
+              <h1 class="section__title section-hero__title" data-splitting>
+                Grow your business with a new website.
+              </h1>
+            </div>
+
+            <div class="section-hero__entry wow animate__animated animate__fadeInUp" data-wow-delay="0.6s"
+              data-wow-duration="1.2s">
+              <p>Resonance is a full-service creative studio creating beautiful digital experiences and products.</p>
+            </div>
+
+            <div class="section-hero__actions wow animate__animated animate__fadeInUp" data-wow-delay="0.6s"
+              data-wow-duration="1.2s">
+              <a href="#" class="btn btn-dark btn-hover-anim">
+                <span>DISCOVER NOW</span>
+              </a>
+              <a href="#" class="link link-hover-anim">
+                <span class="link-video link-el link-el--visible">
+                  How it works?</span>
+                <span class="link-video link-el link-el--unvisible">
+                  How it works?</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-hero__images">
+            <div class="section-hero__image section-hero__image--1 wow" data-wow-delay="2.2s">
+              <img src="./stack-image-1.png" alt="">
+            </div>
+
+            <div class="section-hero__image section-hero__image--2 wow" data-wow-delay="1.75s">
+              <img src="./stack-image-2.png" alt="">
+            </div>
+
+            <div class="section-hero__image section-hero__image--3 wow" data-wow-delay="1.2s">
+              <img src="./stack-image-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-text-and-media">
+      <div class="container">
+        <div class="section-text-and-media__inner">
+          <div class="section-text-and-media__bar">
+            <div class="section-text-and-media__head">
+              <h4 class="section__subtitle section-text-and-media__subtitle">
+                OUR STORY
+              </h4>
+
+              <h2 class="section__title section-text-and-media__title animate-on-scroll" data-splitting>
+                Better way to create stanning layouts.
+              </h2>
+            </div>
+
+            <div class="section-text-and-media__actions">
+              <a href="#" class="link link-hover-anim">
+                <span class="link-el link-el--visible">Learn more about us </span>
+                <span class="link-el link-el--unvisible">Learn more about us </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-text-and-media__body wow animate__animated animate__fadeInUp" data-wow-delay="0.5s"
+            data-wow-duration="1.2s">
+            <div class="section-text-and-media__media">
+              <img src="./story-image.png" alt="" class="section-text-and-media__media-img">
+              <img src="./decoration-waves.svg" alt="" class="section-text-and-media__media-decor rellax"
+                data-rellax-speed="1" data-rellax-percentage="0.1">
+            </div>
+
+            <div class="section-text-and-media__text">
+              <h5 class="section-text-and-media__text-title">Our Mission</h5>
+
+              <div class="section-text-and-media__text-entry">
+                <p>
+                  We believe that a website is the foundation of a successful online presence, and our goal is to help
+                  businesses establish a strong digital presence. Our process begins with understanding your business
+                  goals.
+                </p>
+              </div>
+
+              <h5 class="section-text-and-media__text-title">Our Vision</h5>
+
+              <div class="section-text-and-media__text-entry">
+                <p>
+                  We then use this information to create a custom website that not only reflects your brand but also
+                  helps you achieve your business objectives. From responsive design to intuitive navigation, we focus
+                  on every detail.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-team">
+      <div class="container">
+        <div class="section-team__inner">
+          <blockquote class="section-team__quote wow animate__animated animate__fadeInUp">
+            <h3 class="section-team__quote-title">We are strong team who brings innovative ideas into production.</h3>
+            <p class="section-team__quote-name">Thomas Johnson</p>
+            <p class="section-team__quote-position">Developer, Co-founder</p>
+          </blockquote>
+
+          <div class="section-team__members">
+            <div class="swiper">
+              <div class="section-team__members-wrapper swiper-wrapper">
+                <div class="section-team__member-box swiper-slide">
+                  <div class="section-team__member-img">
+                    <img src="./team-2.png" class="wow scaleOutIn" alt="image">
+
+                    <ul class="section-team__member-socials">
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="section-team__member-name">
+                    Emma Johnson
+                  </p>
+
+                  <p class="section-team__member-position">
+                    UI/UX Designer, co-founder
+                  </p>
+                </div>
+
+                <div class="section-team__member-box swiper-slide">
+                  <div class="section-team__member-img">
+                    <img src="./team-1.png" class="" alt="image">
+
+                    <ul class="section-team__member-socials">
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="section-team__member-name">
+                    Thomas Johnson
+                  </p>
+
+                  <p class="section-team__member-position">
+                    Developer, co-founder
+                  </p>
+                </div>
+
+                <div class="section-team__member-box swiper-slide">
+                  <div class="section-team__member-img">
+                    <img src="./team-3.png" class="" alt="image">
+
+                    <ul class="section-team__member-socials">
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="section-team__member-name">
+                    Marta Laning
+                  </p>
+
+                  <p class="section-team__member-position">
+                    Art director
+                  </p>
+                </div>
+
+                <div class="section-team__member-box swiper-slide">
+                  <div class="section-team__member-img">
+                    <img src="./team-4.png" alt="image">
+
+                    <ul class="section-team__member-socials">
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="section-team__member-name">
+                    Peter Smith
+                  </p>
+
+                  <p class="section-team__member-position">
+                    Web developer
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-team__members-navigation">
+              <div class="swiper-button-prev">
+                <span></span>
+              </div>
+              <div class="swiper-button-next">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-services">
+      <div class="container">
+        <div class="section-services__inner">
+          <div class="section-services__body">
+            <h4 class="section__subtitle section-services__subtitle">
+              OUR SERVICES
+            </h4>
+
+            <h2 class="section__title section-services__title animate-on-scroll" data-splitting>
+              We provide the best development solutions.
+            </h2>
+            
+            <div class="section-services__entry wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+              <p>The power of design help us to solve complex problems and cultivate business solutions</p>
+            </div>
+
+            <ul class="section-services__list wow animate__animated animate__fadeInUp" data-wow-delay="0.55s">
+              <li data-image-url="./service-1.png" data-entry-content="The core identity reflects consistent associations with the brand whereas the extended identity involves the intricate details of the brand that help generate a constant motif.">
+                <a href="#" class="active">Brand Strategy
+                <span class="section-services__list-number">01</span>
+                </a>
+              </li>
+
+              <li data-image-url="./service-2.png" data-entry-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi sequi necessitatibus hic ab officiis illo ipsum repudiandae veniam iure?">
+                <a href="#">Art Direction
+                <span class="section-services__list-number">02</span>
+                </a>
+              </li>
+
+              <li data-image-url="./service-3.png" data-entry-content="The core identity reflects consistent associations with the brand whereas the extended identity involves the intricate details of the brand that help generate a constant motif.">
+                <a href="#">Creative Design
+                <span class="section-services__list-number">03</span>
+                </a>
+              </li>
+
+              <li data-image-url="./service-4.png" data-entry-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi sequi necessitatibus hic ab officiis illo ipsum repudiandae veniam iure?">
+                <a href="#">Development
+                <span class="section-services__list-number">04</span>
+                </a>
+              </li>
+
+              <li data-image-url="./service-5.png" data-entry-content="The core identity reflects consistent associations with the brand whereas the extended identity involves the intricate details of the brand that help generate a constant motif.">
+                <a href="#">Photography
+                <span class="section-services__list-number">05</span>
+                </a>
+              </li>
+
+              <li data-image-url="./service-6.png" data-entry-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi sequi necessitatibus hic ab officiis illo ipsum repudiandae veniam iure?">
+                <a href="#">Marketing
+                <span class="section-services__list-number">06</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-services__service wow animate__animated animate__fadeInRight animate__slow" data-wow-delay="0.55s">
+            <div class="section-services__service-text">
+              <h4 class="section-services__service-title">Brand Strategy
+              </h4>
+
+              <div class="section-services__service-entry">
+                <p>The core identity reflects consistent associations with the brand whereas the extended identity involves the intricate details of the brand that help generate a constant motif.
+                </p>
+              </div>
+            </div>
+
+            <div class="section-services__service-media">
+              <img src="./service-1.png" alt="service-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-numbers bg-image">
+      <div class="container">
+        <div class="section-numbers__inner">
+          <div class="section-numbers__body">
+            <h2 class="section__title section-numbers__title">
+              Check recent achievements.
+            </h2>
+
+            <div class="section-numbers__entry">
+              <p>We provide the effective ideas that grow businesses of our clients.</p>
+            </div>
+
+            <div class="section-numbers__actions">
+              <a href="#" class="btn btn-light btn-hover-anim">
+                <span>REQUEST PRICE</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-numbers__boxes">
+            <div class="section-numbers__box">
+              <div class="section-numbers__box-head">
+                <p>28%</p>
+              </div>
+
+              <div class="section-numbers__box-descr">
+                <p>Resent tincidunt lacus sedenim posuere posuere nulla acusan.
+                </p>
+              </div>
+            </div>
+
+            <div class="section-numbers__box">
+              <div class="section-numbers__box-head">
+                <p>1.5k</p>
+              </div>
+
+              <div class="section-numbers__box-descr">
+                <p>Curabitur eu quam auctor nuca convallis metus nec feugia.
+                </p>
+              </div>
+            </div>
+
+            <div class="section-numbers__box">
+              <div class="section-numbers__box-head">
+                <p>30+</p>
+              </div>
+
+              <div class="section-numbers__box-descr">
+                <p>Pellentesque pharetra libero eget vestibulum ullamcorper.
+                </p>
+              </div>
+            </div>
+
+            <div class="section-numbers__box">
+              <div class="section-numbers__box-head">
+                <p>2x</p>
+              </div>
+
+              <div class="section-numbers__box-descr">
+                <p>Suspendisse a scelerisque vitae rutrum posuere sec lacus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <!-- relax parallax library -->
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <!-- wow library to activate animations when scroll to them -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</body>
+
 </html>

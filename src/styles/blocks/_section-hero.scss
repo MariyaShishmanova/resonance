@@ -1,0 +1,101 @@
+.section-hero {
+  padding-block: 100px;
+
+  &__inner {
+    @include media(up, $tablet-small) {
+      align-items: center;
+      display: flex;
+      gap: 140px;
+    }
+  }
+
+  &__text {
+    flex-basis: 50%;
+
+    @include media(down, $tablet-small) {
+      margin-block-end: 60px;
+    }
+  }
+
+  &__subtitle {
+    @include media(up, $tablet) {
+      margin-block-end: 30px;
+    }
+  }
+
+  &__title {
+    @include title-h1;
+    margin-block-end: 30px;
+  }
+
+  &__entry {
+    font-size: $text-font-size-2-mobile;
+    margin-block-end: 50px;
+
+    @include media(up, $tablet) {
+      font-size: $text-font-size-2;
+    }
+  }
+
+  &__images {
+    flex-basis: 41.2698%;
+    padding-block: 66px;
+    position: relative;
+  }
+
+  &__image {
+    animation: clipRightIn 1.75s ease;
+    transition: transform $trs cubic-bezier(0, 0, 0.58, 1);
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    &--2 {
+      position: relative;
+      max-width: 57.6884%;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    &--1 {
+      position: absolute;
+      max-width: 57.6884%;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    &--3 {
+      position: absolute;
+      max-width: 57.6884%;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @include media(up, $tablet) {
+      gap: 48px;
+    }
+  }
+}
+
+@keyframes clipRightIn{
+	0% {
+    visibility: hidden;
+		clip-path: inset(0 100% 0 0);
+	}
+
+	to {
+    visibility: visible;
+		clip-path: inset(0);
+	}
+}
