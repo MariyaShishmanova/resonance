@@ -1,10 +1,4 @@
 .section-services {
-  padding-block: 70px;
-
-  @include media(up, $tablet) {
-    padding-block: 120px;
-  }
-
   &__inner {
     @include media(up, $tablet) {
       display: flex;

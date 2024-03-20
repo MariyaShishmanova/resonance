@@ -1,0 +1,9 @@
+.logo {
+  a {
+    display: flex;
+  }
+
+  img {
+    @include image-size(contain);
+  }
+}

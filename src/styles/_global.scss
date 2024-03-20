@@ -47,10 +47,17 @@ button {
 
   @include media(down, $mobile) {
     max-width: 100%;
+    padding-inline: 20px;
   }
 }
 
 .section {
+  padding-block: 70px;
+
+  @include media(up, $tablet) {
+    padding-block: 120px;
+  }
+
   &__title {
     @include title-h2;
     color: $color-black;
@@ -105,8 +112,11 @@ button {
   border: 0;
 }
 
+
+
 .page-content {
   // padding-block-start: var(--header-height);
+  // margin-block-start: 84px;
 }
 
 // hide the elements before the animation is activated

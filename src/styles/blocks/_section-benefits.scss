@@ -1,0 +1,63 @@
+.section-benefits {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include media(down, $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__head {
+    @include media(down, $tablet) {
+      grid-column: 1 / span 4;
+      margin-block-end: 50px;
+    }
+  }
+
+  &__title {
+    font-size: clamp($h3-font-size-mobile, 3vw, $h3-font-size);
+    font-weight: 500;
+    color: $color-black;
+    line-height: 1.2;
+
+    &::after {
+      content: '';
+      width: 80px;
+      height: 1px;
+      background-color: currentColor;
+      display: block;
+      margin-block-start: 30px;
+    }
+  }
+
+  &__feature {
+    padding-inline-start: 30px;
+    border-inline-start: 1px solid $color-alto;
+
+    @include media(down, $tablet-small) {
+      grid-column: 1 / span 4;
+    }
+
+    &-img {
+      @include width-height(48px);
+      margin-block-end: 32px;
+    }
+
+    img {
+      @include image-size(contain);
+    }
+
+    &-title {
+      font-size: $text-font-size-1;
+      font-weight: 500;
+      color: $color-black;
+      margin-block-end: 11px;
+    }
+
+    &-entry {
+      font-size: $text-font-size;
+    }
+  }
+}

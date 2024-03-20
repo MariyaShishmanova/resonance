@@ -1,10 +1,4 @@
 .section-numbers {
-  padding-block: 120px;
-
-  @include media(down, $tablet) {
-    padding-block: 70px;
-  }
-
   &.bg-image {
     background-color: $color-black;
     color: $color-white;

@@ -7,10 +7,13 @@ import Splitting from 'splitting';
 import 'animate.css';
 
 import './src/scripts/parallax';
-import './src/scripts/slider'
+import './src/scripts/sliderTeam';
 import './src/scripts/intersectionObserver';
 import './src/scripts/servicesListTabs';
 import './src/scripts/parallaxBgImage';
+import './src/scripts/header';
+import './src/scripts/portfolioFilter';
+import './src/scripts/sliderTestimonials';
 
 
 // initialize rellax parallax library

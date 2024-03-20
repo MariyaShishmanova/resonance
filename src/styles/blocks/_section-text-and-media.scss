@@ -1,10 +1,4 @@
 .section-text-and-media {
-  padding-block: 70px;
-
-  @include media(up, $tablet-small) {
-    padding-block: 120px;
-  }
-
   &__bar {
     margin-block-end: 30px;
 

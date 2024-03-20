@@ -3,12 +3,17 @@
 @import './typography';
 @import './breakpoints';
 @import './global';
-@import './buttons';
+@import './components/buttons';
 @import './blocks/section-hero';
-@import './links';
+@import './components/links';
 @import './blocks/header';
 @import './blocks/section-text-and-media';
 @import './blocks/section-team';
 @import './blocks/section-services';
 @import './blocks/section-numbers';
+@import './components/logo';
+@import './blocks/section-portfolio';
+@import './blocks/section-cta';
+@import './blocks/section-benefits';
+@import './blocks/section-testimonials';
 

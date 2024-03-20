@@ -1,5 +1,6 @@
 .section-hero {
-  padding-block: 100px;
+  padding-block-end: 100px;
+  padding-block-start: 184px;
 
   &__inner {
     @include media(up, $tablet-small) {

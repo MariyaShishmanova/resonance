@@ -2,12 +2,12 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.section-team .swiper', {
   loop: true,
   slidesPerView: 1,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".section-team .swiper-button-next",
+    prevEl: ".section-team .swiper-button-prev",
   },
   
   breakpoints: {

@@ -11,6 +11,7 @@ $color-boulder: #757575;
 $color-mine-shaft: #333333;
 $color-alabaster: #FCFCFC ;
 $color-alto: #DDDDDD;
+$color-silver: #cccccc;
 /**
    *
    * Font size
@@ -55,7 +56,7 @@ $transition-timing-function-elastic: cubic-bezier(0.68,-3,0.27,5);
    *
    */
 
-//  $shadow: 2px 2px 5px 0 rgba($color-casper, .6);
+ $shadow: 2px 2px 5px 0 rgba($color-white, .6);
 
 /**
    *

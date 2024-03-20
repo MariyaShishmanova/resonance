@@ -1,11 +1,6 @@
 .section-team {
   background-color: $color-seashell;
-  padding-block: 70px;
-
-  @include media(up, $tablet-small) {
-    padding-block: 120px;
-  }
-
+  
   &__inner {
     @include media(up, $tablet-small) {
       display: flex;

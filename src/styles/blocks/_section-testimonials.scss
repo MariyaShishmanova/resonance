@@ -1,0 +1,158 @@
+.section-testimonials {
+  &__inner {
+    background-color: $color-seashell;
+    padding: 70px 24px;
+
+    @include media(up, $tablet) {
+      padding-block: 80px;
+    }
+  }
+
+  &__title {
+    @include center-block(677px);
+    text-align: center;
+    margin-block-end: 40px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 80px;
+    }
+  }
+
+  &__body {
+    @include center-block(818px);
+  }
+
+  &__item {
+    padding-inline-start: clamp(50px, 7vw, 90px);
+    position: relative;
+    opacity: 0;
+    transform: scale(.75);
+    transition-property: opacity, transform;
+    transition-duration: $trs;
+
+    @include media(up, $tablet) {
+      font-size: $h4-font-size;
+    }
+
+    &:before {
+      content: '\f10e';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background-color: $color-white;
+      color: $color-black;
+      border-radius: 50%;
+      width: clamp(33px, 5vw, 60px);
+      height: clamp(33px, 5vw, 60px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(11px, 1.5vw, 16px);
+    }
+
+    &-text {
+      color: $color-black;
+      position: relative;
+      padding-block-end: 40px;
+      margin-block-end: 20px;
+
+      &:after {
+        content: '';
+        background-color: $color-black;
+        width: 80px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
+    }
+
+    &-person {
+     display: flex;
+     gap: 10px;
+     padding-block-end: 100px;
+    }
+
+    &-img {
+      @include width-height(44px);
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    &-name {
+      font-size: $text-font-size-1;
+      color: $color-black;
+    }
+
+    &-position {
+      font-size: 15px;
+    }
+  }
+
+  &__item.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &-navigation {
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+
+    &-button-next,
+    &-button-prev {
+      width: auto;
+
+      span {
+        background-color: $color-white;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        transition: transform $trs1 $transition-timing-function-elastic;
+      }
+
+      &:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        font-size: 14px;
+        color: $color-black;
+        position: absolute;
+      }
+
+      &:hover {
+        span {
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    &-button-prev {
+      left: -55px;
+
+      &:after {
+        content: '\f060';
+      }
+    }
+
+    &-button-next {
+      right: -55px;
+
+      &:after {
+        content: '\f061';
+      }
+    }
+  }
+
+}
