@@ -14,6 +14,7 @@ import './src/scripts/parallaxBgImage';
 import './src/scripts/header';
 import './src/scripts/portfolioFilter';
 import './src/scripts/sliderTestimonials';
+import './src/scripts/sliderBoxes';
 
 
 // initialize rellax parallax library

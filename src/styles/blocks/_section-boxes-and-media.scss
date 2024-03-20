@@ -1,0 +1,73 @@
+.section-boxes-and-media {
+  &__title {
+    margin-block-end: 30px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 60px;
+      max-width: 520px;
+    }
+  }
+
+  &__inner {
+    @include media(up, $tablet) {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    flex-basis: 50%;
+  }
+
+  &__media {
+    flex-basis: 50%;
+    position: relative;
+
+    @include media(down, $tablet) {
+      margin-block-start: 60px;
+    }
+
+    @include media(down, $mobile) {
+      margin-block-start: 30px;
+    }
+
+    &-1 {
+      width: 67.38%;
+      margin-inline-start: auto;
+    }
+
+    &-2 {
+      width: 41.5%;
+      position: absolute;
+      left: 0;
+      top: 80px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__boxes {
+    @include media(up, $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__box {
+    flex-basis: 50%;
+
+    &-img {
+      margin-block-end: 22px;
+    }
+  }
+
+  &__box + &__box {
+    @include media(down, $tablet) {
+      margin-block-start: 30px;
+    }
+  }
+}

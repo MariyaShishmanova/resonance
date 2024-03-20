@@ -100,6 +100,11 @@ button {
       left: 0;
     }
   }
+
+  &.dark-bg {
+    background-color: $color-black;
+    color: $color-white
+  }
 }
 
 .sr-only {
@@ -111,8 +116,6 @@ button {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
-
 
 .page-content {
   // padding-block-start: var(--header-height);

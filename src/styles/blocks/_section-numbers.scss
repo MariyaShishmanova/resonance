@@ -1,8 +1,5 @@
 .section-numbers {
   &.bg-image {
-    background-color: $color-black;
-    color: $color-white;
-
     &:before {
       background-color: rgba($color-black, 0.9);
     }
@@ -54,5 +51,9 @@
     font-size: clamp($numbers-font-size-mobile, 6vw, $numbers-font-size);
     line-height: 1;
     margin-block-end: 10px;
+  }
+
+  &__box-descr {
+    color: rgba($color-white, .7);
   }
 }

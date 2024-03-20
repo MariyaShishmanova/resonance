@@ -1,0 +1,33 @@
+.section-logos {
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: $text-font-size-2-mobile;
+    font-weight: 500;
+    color: $color-black;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-block-start: 30px;
+  }
+
+  &__logo {
+    height: 33px;
+    opacity: .35;
+    transition: opacity $trs ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+}

@@ -39,25 +39,5 @@
     @include media(down, $tablet-small) {
       grid-column: 1 / span 4;
     }
-
-    &-img {
-      @include width-height(48px);
-      margin-block-end: 32px;
-    }
-
-    img {
-      @include image-size(contain);
-    }
-
-    &-title {
-      font-size: $text-font-size-1;
-      font-weight: 500;
-      color: $color-black;
-      margin-block-end: 11px;
-    }
-
-    &-entry {
-      font-size: $text-font-size;
-    }
   }
 }

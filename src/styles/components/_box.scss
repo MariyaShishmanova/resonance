@@ -1,0 +1,21 @@
+.box {
+  &__img {
+    @include width-height(48px);
+    margin-block-end: 32px;
+  }
+
+  img {
+    @include image-size(contain);
+  }
+
+  &__title {
+    font-size: $text-font-size-1;
+    font-weight: 500;
+    color: $color-black;
+    margin-block-end: 11px;
+  }
+
+  &__entry {
+    font-size: $text-font-size;
+  }
+}
