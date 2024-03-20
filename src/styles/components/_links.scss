@@ -4,6 +4,24 @@
   display: flex;
   font-size: $link-font-size;
 
+  &.link-arrow {
+    padding-block: 6px;
+
+    .link-el {
+      border-bottom: 2px solid currentColor;
+      padding: 0 25px 5px 0;
+      position: relative;
+
+      &:after {
+        content: url(/arrow-right.svg);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
   &.link-hover-anim {
     position: relative;
     overflow: hidden;
