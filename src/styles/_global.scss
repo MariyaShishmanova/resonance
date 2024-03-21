@@ -103,7 +103,13 @@ button {
 
   &.dark-bg {
     background-color: $color-black;
-    color: $color-white
+    color: $color-white;
+
+    &.bg-image {  
+      &:before {
+        background-color: rgba($color-black, .9);
+      }
+    }
   }
 }
 

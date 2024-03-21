@@ -3,12 +3,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-let slidesPerView = 1;
-
 const swiper = new Swiper('.section-boxes .swiper', {
   loop: true,
-  slidesPerView: slidesPerView,
+  slidesPerView: 1,
   spaceBetween: 40,
   autoplay: {
     delay: 5000, // Adjust delay between slides (in milliseconds)

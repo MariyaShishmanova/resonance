@@ -1,0 +1,93 @@
+.section-newsletter {
+  &__inner {
+    text-align: center;
+
+    @include media(up, $tablet-small) {
+      @include center-block(66.7%);
+    }
+
+    @include media(up, $desktop) {
+      @include center-block(48.83%);
+    }
+  }
+
+  &__title {
+    font-size: $h2-font-size-mobile;
+    margin-block-end: 40px;
+
+    @include media(up, $tablet) {
+      font-size: $h3-font-size;
+    }
+  }
+
+  &__form {
+    &-row {
+      @include media(up, $mobile) {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    &-tip {
+      margin-block-start: 20px;
+      color: rgba($color-white, 0.7);
+      display: flex;
+      align-items: baseline;
+      font-size: $h6-font-size;
+      text-align: left;
+      gap: 5px;
+
+      a {
+        text-decoration: underline;
+        transition: color $trs ease;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  input[type='email'] {
+    background-color: transparent;
+    border: 2px solid rgba($color-white, 0.2);
+    border-radius: 3px;
+    color: $color-white;
+    padding-inline: 20px;
+    transition: border-color $trs ease-out;
+    font-size: $text-font-size;
+    height: 52px;
+    flex-grow: 1;
+
+    @include media(down, $mobile) {
+      margin-block-end: 10px;
+      width: 100%;
+    }
+
+    &:hover {
+      border-color: rgba($color-white, 0.4);
+
+      &::placeholder {
+        color: rgba($color-white, 0.55);
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-white, 0.4);
+      transition: color $trs ease-out;
+    }
+
+    &:focus {
+      border-color: rgba($color-white, 0.5);
+      outline: none;
+    }
+  }
+
+  .btn {
+    background-color: rgba($color-white, 0.98);
+
+    @include media(down, $mobile) {
+      width: 100%;
+    }
+  }
+}

@@ -9,13 +9,9 @@
   text-align: center;
   user-select: none;
   text-decoration: none;
-  padding: 16px 32px 15px;
-
-
-  &-dark {
-    background-color: $color-black;
-    color: $color-white;
-  }
+  padding: 17px 32px;
+  line-height: normal;
+  height: 53px;
 
   &.btn-hover-anim {
     position: relative;
@@ -48,14 +44,25 @@
     }
   }
 
+  &-dark {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
   &-light {
     background-color: $color-white;
     color: $color-black;
   }
 
   &-light.btn-hover-anim {
+    border-color: $color-white;
+
     &:before {
       background-color: $color-alto;
+    }
+
+    &:hover {
+      border-color: $color-white;
     }
   }
 
