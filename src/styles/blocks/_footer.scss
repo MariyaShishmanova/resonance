@@ -1,0 +1,85 @@
+.footer {
+  padding-block: 70px;
+  background-color: $color-seashell;
+  font-size: $text-font-size;
+
+  @include media(up, $tablet) {
+    padding-block: 120px;
+  }
+
+  &__head {
+    flex-basis: 23.2558%;
+
+    @include media(down, $tablet-small) {
+      margin-block-end: 50px;
+    }
+  }
+
+  &__entry {
+    margin-block: 30px 24px;
+  }
+
+  &__body {
+    margin-block-end: 50px;
+
+    @include media(up, $tablet-small) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu-cols {
+    flex-basis: 57.3643%;
+
+    @include media(up, $mobile) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      gap: 30px;
+    }
+  }
+
+  &__menu-col + &__menu-col {
+    @include media(down, $mobile) {
+      margin-block-start: 30px;
+    }
+  }
+
+  &__menu-title {
+    margin-block-end: 16px;
+    font-size: $text-font-size-1;
+    color: $color-black;
+    font-weight: 500;
+  }
+
+  &__menu-item {
+    transition: color $trs ease;
+
+    &:hover {
+      color: $color-black;
+    }
+
+    i {
+      margin-inline-end: 5px;
+    }
+  }
+
+  &__menu-item + &__menu-item {
+    margin-block-start: 3px;
+  }
+
+  &__bar {
+    @include media(up, $tablet-small) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__location {
+    flex-basis: 57.3643%;
+  }
+
+  .copyright {
+    flex-basis: 23.2558%;
+  }
+}
