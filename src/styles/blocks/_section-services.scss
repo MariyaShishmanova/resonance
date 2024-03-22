@@ -1,5 +1,6 @@
 .section-services {
   &__inner {
+    overflow: hidden;
     @include media(up, $tablet) {
       display: flex;
       gap: 30px;
@@ -93,6 +94,14 @@
   &__service {
     flex-basis: 50%;
     position: relative;
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: $trs;
+    transition-timing-function: ease;
+
+    &.active {
+      opacity: 1;
+    }
 
     &-title {
       margin-bottom: 14px;

@@ -41,7 +41,7 @@
       @include media(up, $tablet-small) {
         &:after {
           content: '';
-          height: 2px;
+          height: 1px;
           background-color: currentColor;
           display: block;
           position: absolute;
@@ -96,7 +96,15 @@
       margin-block-end: 18px;
       clip-path: inset(-1px);
       will-change: clip-path;
-      transition: clip-path 2s $transition-timing-function1;
+      animation: clipRightIn 1.75s ease;
+      opacity: 0;
+      transition-property: clip-path, transform;
+      transition-duration: 2s;
+      transition-timing-function: $transition-timing-function1;
+
+      &.visible {
+        opacity: 1;
+      }
     }
 
     &-head {

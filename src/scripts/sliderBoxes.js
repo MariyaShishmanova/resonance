@@ -4,21 +4,21 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const swiper = new Swiper('.section-boxes .swiper', {
-  loop: true,
+  // loop: true,
   slidesPerView: 1,
   spaceBetween: 40,
-  autoplay: {
-    delay: 5000, // Adjust delay between slides (in milliseconds)
-    disableOnInteraction: false, // Allow autoplay to continue after user interaction
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".section-team .swiper-button-next",
-    prevEl: ".section-team .swiper-button-prev",
-  },
+  // autoplay: {
+  //   delay: 5000, // Adjust delay between slides (in milliseconds)
+  //   disableOnInteraction: false, // Allow autoplay to continue after user interaction
+  // },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: ".section-team .swiper-button-next",
+  //   prevEl: ".section-team .swiper-button-prev",
+  // },
   
   breakpoints: {
     // when window width is >= 480px

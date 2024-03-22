@@ -139,3 +139,15 @@ button {
     opacity: 0;
   }
 }
+
+@keyframes clipRightIn{
+	0% {
+    visibility: hidden;
+		clip-path: inset(0 100% 0 0);
+	}
+
+	to {
+    visibility: visible;
+		clip-path: inset(0);
+	}
+}

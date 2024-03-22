@@ -45,6 +45,7 @@
       position: absolute;
       left: 0;
       top: 80px;
+      transition: transform $trs $transition-timing-function1;
     }
 
     img {

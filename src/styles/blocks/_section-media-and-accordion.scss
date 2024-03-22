@@ -83,6 +83,7 @@
         font-family: 'Font Awesome 5 Free';
         font-weight: 700;
         font-size: 15px;
+        transition: transform $trs ease;
       }
 
       &.active {
@@ -96,14 +97,16 @@
   &__accordion-descr {
     opacity: 0;
     visibility: hidden;
-    display: none;
-    padding-bottom: 28px;
+    transition-property:height, opacity, visibility;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    height: 0;
   }
 
   &__accordion-descr.active {
     opacity: 1;
     visibility: visible;
-    display: block;
   }
 
   img {

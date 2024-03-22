@@ -4,6 +4,7 @@ const listItems = document.querySelectorAll('.section-services__list li');
 const serviceTitle = document.querySelector('.section-services__service-title');
 const serviceEntry = document.querySelector('.section-services__service-entry');
 const serviceMedia = document.querySelector('.section-services__service-media img');
+const serviceContainer = document.querySelector('.section-services__service');
 
 if (links) {
   links.forEach(link => {
@@ -29,9 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update the content of .section-services__service-title, .section-services__service-entry and  image src based on the clicked list item
     if (serviceTitle && serviceEntry && serviceMedia) {
-      serviceTitle.textContent = title;
-      serviceEntry.textContent = entry;
-      serviceMedia.src = imageUrl;
+      serviceContainer.classList.remove('active');
+
+      // Update the content
+      setTimeout(() => {
+        serviceTitle.textContent = title;
+        serviceEntry.textContent = entry;
+        serviceMedia.src = imageUrl;
+
+        // Show the container with updated content
+        serviceContainer.classList.add('active');
+      }, 300); // Set timeout to match the transition duration
     }
   }
 
@@ -40,5 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
     listItems.forEach(item => {
       item.addEventListener('click', handleListItemClick);
     });
+  }
+
+  if (listItems && listItems.length > 0) {
+    const firstListItem = listItems[0];
+    handleListItemClick.call(firstListItem); // Call the click handler for the first list item
   }
 });
