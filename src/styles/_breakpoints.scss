@@ -4,7 +4,7 @@
       @content;
     }
   } @else if $direction == up {
-    @media screen and (min-width: $size) {
+    @media screen and (min-width: calc($size + 1px)) {
       @content;
     }
   }

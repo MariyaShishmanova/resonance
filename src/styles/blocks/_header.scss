@@ -6,7 +6,7 @@
   z-index: 9;
   padding-block: 22px;
   background-color: transparent;
-  transition: background-color $trs ease, box-shadow  $trs ease;
+  transition: background-color $trs ease, box-shadow $trs ease;
 
   &.header-white-bg {
     background-color: $color-white;
@@ -23,19 +23,72 @@
     flex-basis: 105px;
   }
 
-  &__menu {
-    display: flex;
-    gap: 36px;
-    font-size: $link-font-size;
+  &__nav,
+  &__actions {
+    @include media(up, $mobile) {
+      padding-inline: 30px;
+    }
 
-    @include media(down, $desktop) {
-      gap: 22px;
+    @include media(down, $tablet) {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--header-height);
+      transition-property: visibility, opacity;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+      padding-inline: 20px;
+      overflow-y: auto;
+
+      a {
+        transition-property: background-color, color;
+        transition-duration: $trs;
+        background-color: $color-black;
+        color: $color-white;
+        display: block;
+        padding: 15px 10px;
+        border-top: 1px solid $color-mine-shaft;
+
+        &:hover {
+          background-color: $color-black-pearl;
+          color: rgba($color-white, 0.7);
+        }
+      }
     }
   }
 
   &__actions {
-    display: flex;
-    align-items: center;
+    @include media(down, $tablet) {
+      top: calc(var(--header-height) + var(--nav-height));
+    }
+
+    @include media(up, $tablet) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    font-size: $link-font-size;
+
+    @include media(up, $tablet) {
+      display: flex;
+      gap: 36px;
+
+      a {
+        transition: color $trs ease;
+
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+
+    @include media(down, $desktop) {
+      gap: 22px;
+    }
   }
 
   &__languages {
@@ -76,10 +129,20 @@
   }
 
   &__link {
-    margin-inline-start: 36px;
+    @include media(up, $tablet) {
+      margin-inline-start: 36px;
+    }
 
-    span {
+    .link-el {
       padding-block: 5px;
+
+      &.link-el--unvisible {
+        @include media(down, $tablet) {
+          top: 15px;
+          left: 10px;
+        }
+      }
+
       &:after {
         content: '';
         width: 100%;
@@ -88,5 +151,13 @@
         display: block;
       }
     }
+  }
+}
+
+.mobile-nav-visible {
+  .header__nav,
+  .header__actions {
+    opacity: 1;
+    visibility: visible;
   }
 }

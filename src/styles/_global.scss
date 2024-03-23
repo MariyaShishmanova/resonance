@@ -123,16 +123,6 @@ button {
   border: 0;
 }
 
-.page-content {
-  // padding-block-start: var(--header-height);
-  // margin-block-start: 84px;
-}
-
-// hide the elements before the animation is activated
-// .animate__animated {
-//   visibility: hidden;
-// }
-
 @keyframes slide-in {
   from {
     transform: translateY(10px) scaleY(1.5);

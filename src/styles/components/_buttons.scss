@@ -70,8 +70,9 @@
     cursor: pointer;
     position: relative;
     display: none;
-    width: 25px;
-    height: 20px;
+    width: 29px;
+    height: 25px;
+    padding: 0;
 
     @include media(down, $tablet) {
       display: block;
@@ -84,12 +85,12 @@
       }
 
       &:before {
-        top: 6px;
+        top: 50%;
         transform: rotate(45deg);
       }
 
       span:after {
-        top: 6px;
+        top: 50%;
         transform: rotate(-45deg);
       }
     }
@@ -98,7 +99,7 @@
     &:after,
     span:after {
       content: '';
-      // background-color: $color-outer-space;
+      background-color: $color-black;
       position: absolute;
       height: 2px;
       width: 100%;
@@ -110,15 +111,15 @@
     }
 
     &:before {
-      top: 0;
+      top: 4px;
     }
 
     &:after {
-      top: 6px;
+      top: 50%;
     }
 
     span:after {
-      top: 12px;
+      bottom:3px;
     }
   }
 }
