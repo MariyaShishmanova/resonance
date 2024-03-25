@@ -1,11 +1,15 @@
 const header = document.querySelector('.header');
 const btnNav = document.querySelector('.btn-nav');
-const headerNav = document.querySelector('.header__nav');
+const headerLanguages = document.querySelector('.header__languages');
 
 // function to handle btnNav click
 function handleBtnNav() {
   btnNav.classList.toggle('active');
   document.body.classList.toggle('mobile-nav-visible');
+}
+
+function handleHeaderLanguages() {
+  headerLanguages.classList.toggle('active');
 }
 
 // function to set css property to html
@@ -26,19 +30,6 @@ function getAndUpdateHeaderHeight() {
     if (headerHeight !== currentHeaderHeight) {
       currentHeaderHeight = headerHeight;
       setCssProperty('--header-height', currentHeaderHeight);
-    }
-  }
-}
-
-// function to get the nav height
-function getAndUpdateNavHeight() {
-  let currentNavHeight = 0;
-  if (headerNav) {
-    let navHeight = headerNav.offsetHeight;
-
-    if (navHeight !== currentNavHeight) {
-      currentNavHeight = navHeight;
-      setCssProperty('--nav-height', currentNavHeight);
     }
   }
 }
@@ -73,7 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnNav.addEventListener('click', handleBtnNav);
   }
 
+  if (headerLanguages) {
+    headerLanguages.addEventListener('click', handleHeaderLanguages);
+  }
+
+  setCssProperty('--viewport-height', window.innerHeight);
   window.addEventListener('resize', () => {
+    setCssProperty('--viewport-height', window.innerHeight);
+
     // check if the window inner width is > then 992px and the mobile menu is open and if so - remove the active class from btn and mobile-nav-visible from body
     if (
       window.innerWidth > 992 &&
@@ -87,8 +85,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // set --header-height to the html and update it when resize
   getAndUpdateHeaderHeight();
   window.addEventListener('resize', getAndUpdateHeaderHeight);
-
-  // set --nav-height to the html and update it when resize
-  getAndUpdateNavHeight();
-  window.addEventListener('resize', getAndUpdateNavHeight);
 });

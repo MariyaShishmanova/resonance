@@ -38,23 +38,32 @@
     background-image: url(/bg-image-2.png);
 
     &:before {
-      background-color: rgba($color-black, .6);
+      background-color: rgba($color-black, 0.6);
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    color: rgba($color-white, .75);
-  }
   .swiper {
-    width: 100%;
+    width: 90%;
     height: 100%;
-  }
+    padding-bottom: 70px;
 
-  .swiper-pagination-bullet {
-    border: 1px solid $color-white;
+    @include media(up, $desktop) {
+      width: 100%;
+    }
 
-    &-active {
-      background-color: $color-white;
+    &-button-prev,
+    &-button-next {
+      color: rgba($color-white, 0.75);
+    }
+
+    &-pagination {      
+      &-bullet {
+        border: 1px solid $color-white;
+    
+        &-active {
+          background-color: $color-white;
+        }
+      }
     }
   }
 }

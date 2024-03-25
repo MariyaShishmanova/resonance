@@ -9,7 +9,8 @@ const swiper = new Swiper('.section-team .swiper', {
     nextEl: ".section-team .swiper-button-next",
     prevEl: ".section-team .swiper-button-prev",
   },
-  
+  effect: 'slide',
+  speed: 800,
   breakpoints: {
     // when window width is >= 320px
     480: {
