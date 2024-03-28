@@ -17,6 +17,7 @@ import './src/scripts/sliderTestimonials';
 import './src/scripts/sliderBoxes';
 import './src/scripts/smoothScroll';
 import './src/scripts/accordion';
+import './src/scripts/smoothScrollToSections';
 
 
 // initialize rellax parallax library
