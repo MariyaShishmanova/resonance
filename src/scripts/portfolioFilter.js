@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const categoryName = box.dataset.category;
         if (category === 'all' || categoryName === category) {
           box.style.display = 'block';
-          if (category !== 'all') {
-            box.style.marginTop = '0'; // Set margin top to 0 for branding, development, and design categories
-          } else {
-            box.style.marginTop = ''; // Reset margin top to default as defined in CSS for other categories
-          };
         } else {
           box.style.display = 'none';
         }

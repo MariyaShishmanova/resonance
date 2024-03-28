@@ -37,8 +37,10 @@
   &.bg-image {
     background-image: url(/bg-image-2.png);
 
-    &:before {
-      background-color: rgba($color-black, 0.6);
+    &.dark-bg {
+      &:before {
+        background-color: rgba($color-black, 0.6);
+      }
     }
   }
 
@@ -56,10 +58,10 @@
       color: rgba($color-white, 0.75);
     }
 
-    &-pagination {      
+    &-pagination {
       &-bullet {
         border: 1px solid $color-white;
-    
+
         &-active {
           background-color: $color-white;
         }

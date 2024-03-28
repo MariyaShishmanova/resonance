@@ -84,9 +84,10 @@ button {
   &.bg-image {
     background-color: $color-alabaster;
     background-image: url(/section-hero-bg.png);
-    background-position: center -100px;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 

@@ -139,7 +139,7 @@
 
   &__box:nth-child(3n + 2) {
     @include media(up, $tablet) {
-      margin-top: -90px;
+      margin-block-start: -90px;
     }
   }
 
