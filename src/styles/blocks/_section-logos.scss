@@ -20,11 +20,6 @@
   &__logo {
     height: 33px;
     opacity: .35;
-    transition: opacity $trs ease-out;
-
-    &:hover {
-      opacity: 1;
-    }
 
     img {
       @include image-size;

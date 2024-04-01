@@ -1,11 +1,11 @@
-const links = document.querySelectorAll(
-  '.section-media-and-accordion__accordion-term a'
-);
-const descriptions = document.querySelectorAll(
-  '.section-media-and-accordion__accordion-descr'
-);
-
 document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll(
+    '.section-media-and-accordion__accordion-term a'
+  );
+  const descriptions = document.querySelectorAll(
+    '.section-media-and-accordion__accordion-descr'
+  );
+
   if (links) {
     links.forEach(link => {
       link.addEventListener('click', event => {
@@ -19,12 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!event.target.classList.contains('active')) {
           event.target.classList.add('active');
           event.target.nextElementSibling.classList.add('active');
-        }
+          event.target.removeEventListener('click', handleClick); // Remove click event listener for the clicked link
 
-        // Update height for descriptions
-        updateHeight();
+          // Update height for descriptions
+          updateHeight();
+        }
       });
     });
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
   }
 
   function updateHeight() {

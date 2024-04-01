@@ -1,5 +1,6 @@
 .section-team {
   background-color: $color-seashell;
+  overflow-x: hidden;
   
   &__inner {
     @include media(up, $tablet-small) {
@@ -133,56 +134,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: color $trs ease;
+
+        &:hover {
+          color: $color-boulder;
+        }
       }
     }
   }
 
   .swiper {
-    width: 100%;
-    height: 100%;
-
-    &-button-next,
-    &-button-prev {
-      width: auto;
-      z-index: 1;
-
-      span {
-        background-color: $color-white;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-        transition: transform $trs1 $transition-timing-function-elastic;
-      }
-
-      &:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 700;
-        font-size: 14px;
-        color: $color-black;
-        position: absolute;
-      }
-
-      &:hover {
-        span {
-          transform: scale(1.25);
-        }
-      }
-    }
-
     &-button-prev {
       left: -24px;
-
-      &:after {
-        content: '\f060';
-      }
     }
 
     &-button-next {
       right: -24px;
-
-      &:after {
-        content: '\f061';
-      }
     }
   }
 

@@ -195,7 +195,7 @@
     .link-el {
       padding-block: 5px;
 
-      &.link-el--unvisible {
+      &.link-el--invisible {
         @include media(down, $tablet) {
           top: 15px;
           left: 10px;

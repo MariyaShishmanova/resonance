@@ -1,40 +1,40 @@
-const header = document.querySelector('.header');
-const btnNav = document.querySelector('.btn-nav');
-const headerLanguages = document.querySelector('.header__languages');
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header');
+  const btnNav = document.querySelector('.btn-nav');
+  const headerLanguages = document.querySelector('.header__languages');
 
-// function to handle btnNav click
-function handleBtnNav() {
-  btnNav.classList.toggle('active');
-  document.body.classList.toggle('mobile-nav-visible');
-}
-
-function handleHeaderLanguages() {
-  headerLanguages.classList.toggle('active');
-}
-
-// function to set css property to html
-function setCssProperty(property, value, unit = 'px') {
-  if (!property || !value) {
-    throw new Error('Both property and value are required');
+  // function to handle btnNav click
+  function handleBtnNav() {
+    btnNav.classList.toggle('active');
+    document.body.classList.toggle('mobile-nav-visible');
   }
-  document.documentElement.style.setProperty(property, `${value}${unit}`);
-}
 
-// function to get the header height
-function getAndUpdateHeaderHeight() {
-  let currentHeaderHeight = 0;
+  function handleHeaderLanguages() {
+    headerLanguages.classList.toggle('active');
+  }
 
-  if (header) {
-    let headerHeight = header.offsetHeight;
+  // function to set css property to html
+  function setCssProperty(property, value, unit = 'px') {
+    if (!property || !value) {
+      throw new Error('Both property and value are required');
+    }
+    document.documentElement.style.setProperty(property, `${value}${unit}`);
+  }
 
-    if (headerHeight !== currentHeaderHeight) {
-      currentHeaderHeight = headerHeight;
-      setCssProperty('--header-height', currentHeaderHeight);
+  // function to get the header height
+  function getAndUpdateHeaderHeight() {
+    let currentHeaderHeight = 0;
+
+    if (header) {
+      let headerHeight = header.offsetHeight;
+
+      if (headerHeight !== currentHeaderHeight) {
+        currentHeaderHeight = headerHeight;
+        setCssProperty('--header-height', currentHeaderHeight);
+      }
     }
   }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
   // change the header background when scroll
   let top = 0;
   window.addEventListener('scroll', function() {

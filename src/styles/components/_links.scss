@@ -32,7 +32,7 @@
       display: inline-block;
       overflow: hidden;
 
-      &--unvisible {
+      &--invisible {
         position: absolute;
         top: 0;
         left: 0;
@@ -47,7 +47,7 @@
         transform: translateY(-150%) translateZ(0.001px) skewY(-10deg);
       }
   
-      .link-el--unvisible {
+      .link-el--invisible {
         opacity: 1;
         transform: translateY(0) translateZ(0.001px) skewY(0);
       }

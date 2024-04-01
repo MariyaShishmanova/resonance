@@ -45,12 +45,10 @@
   }
 
   .swiper {
-    width: 90%;
-    height: 100%;
     padding-bottom: 70px;
 
-    @include media(up, $desktop) {
-      width: 100%;
+    @include media(down, $desktop) {
+      width: 90%;
     }
 
     &-button-prev,

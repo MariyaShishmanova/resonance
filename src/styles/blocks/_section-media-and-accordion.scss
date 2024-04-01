@@ -87,6 +87,8 @@
       }
 
       &.active {
+        pointer-events: none;
+
         &:after {
           transform: rotate(-180deg);
         }
