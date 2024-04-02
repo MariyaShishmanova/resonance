@@ -1,0 +1,15 @@
+{
+  "hash": "cc4f7906",
+  "configHash": "da317ee3",
+  "lockfileHash": "093dbe2a",
+  "browserHash": "ed9021e7",
+  "optimized": {
+    "splitting": {
+      "src": "../../node_modules/splitting/dist/splitting.js",
+      "file": "splitting.js",
+      "fileHash": "2fb8b892",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}

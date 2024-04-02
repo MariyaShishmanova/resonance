@@ -1,0 +1,117 @@
+.section-media-and-accordion {
+  &__inner {
+    @include media(up, $tablet) {
+      align-items: center;
+      display: flex;
+      gap: 63px;
+    }
+  }
+
+  &__media {
+    position: relative;
+    padding-block: 120px;
+    flex-basis: 54.6511%;
+
+    @include media(down, $tablet) {
+      margin-block-end: 60px;
+    }
+
+    @include media(down, $mobile) {
+      padding-block: 60px;
+      margin-block-end: 30px;
+    }
+  }
+
+  &__img-1,
+  &__img-3 {
+    position: absolute;
+    width: 36.85%;
+  }
+
+  &__img-2 {
+    @include center-block(77.145%);
+    z-index: 1;
+    position: relative;
+  }
+
+  &__img-1 {
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &__img-3 {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  &__title {
+    margin-block-end: 20px;
+
+    @include media(up, $tablet) {
+      margin-block-end: 50px;
+    }
+  }
+
+  &__text {
+    flex-basis: 40.31%;
+  }
+
+  &__accordion {
+    margin-bottom: 40px;
+  }
+
+  &__accordion-term {
+    position: relative;
+    border-top: 1px solid rgba($color-black, 0.4);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($color-black, 0.4);
+    }
+
+    a {
+      padding-block: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: $text-font-size-2-mobile;
+      color: $color-black;
+      transition: transform $trs ease;
+
+      &:after {
+        content: '\f078';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        font-size: 15px;
+        transition: transform $trs ease;
+      }
+
+      &.active {
+        pointer-events: none;
+
+        &:after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  &__accordion-descr {
+    opacity: 0;
+    visibility: hidden;
+    transition-property:height, opacity, visibility;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    height: 0;
+  }
+
+  &__accordion-descr.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img {
+    @include image-size;
+  }
+}

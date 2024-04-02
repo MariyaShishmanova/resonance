@@ -1,0 +1,77 @@
+.form {
+  &__label {
+    display: block;
+    font-size: $text-font-size-1;
+    font-weight: 500;
+    color: $color-black;
+    margin-block-end: 7px;
+  }
+
+  &__row {
+    @include media(up, $tablet) {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__field {
+    flex-basis: 50%;
+    @include media(down, $tablet) {
+      margin-block-end: 21px;
+    }
+  }
+
+  &__input, &__message {
+    border: 2px solid rgba($color-black, 0.1);
+    border-radius: 3px;
+    color: $color-black;
+    padding-inline: 20px;
+    transition: border-color $trs ease-out;
+    font-size: $text-font-size;
+    height: 52px;
+    width: 100%;
+
+    &:hover {
+      border-color: rgba($color-black, 0.2);
+
+      &::placeholder {
+        color: rgba($color-black, 6);
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-black, 0.5);
+      transition: color $trs ease-out;
+    }
+
+    &:focus {
+      border-color: rgba($color-black, 0.2);
+      outline: none;
+    }
+  }
+
+  &__message {
+    height: 130px;
+    padding-block: 12px;
+    margin-block-end: 41px;
+  }
+
+  &__tip {
+    margin-block-start: 20px;
+    color: rgba($color-black, 0.8);
+    display: flex;
+    align-items: baseline;
+    font-size: $h6-font-size;
+    text-align: left;
+    gap: 5px;
+
+    a {
+      text-decoration: underline;
+      transition: color $trs ease;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}

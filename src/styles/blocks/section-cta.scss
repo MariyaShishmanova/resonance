@@ -1,0 +1,35 @@
+.section-cta {
+  text-align: center;
+  border-top: 1px solid rgba($color-alto, .5);
+  border-bottom: 1px solid rgba($color-alto, .5);
+
+  &__inner {
+    position: relative;
+  }
+
+  &__text {
+    @include center-block(630px);
+    font-size: $text-font-size-2-mobile;
+    margin-block-end: 30px;
+
+    @include media(up, $tablet-small) {
+      font-size: $text-font-size-2;
+      margin-block-end: 50px;
+    }
+  }
+
+  &__decoration {
+    display: none;
+
+    @include media(up, $mobile) {
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: -50px;
+    }
+
+    @include media(up, $tablet-small) {
+      right: 100px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Set width and height of the same size.
+@mixin width-height($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin center-block($width) {
+  margin-inline: auto;
+  max-width: $width;
+}
+
+@mixin image-size($size: cover) {
+  height: 100%;
+  object-fit: $size;
+  width: 100%;
+}

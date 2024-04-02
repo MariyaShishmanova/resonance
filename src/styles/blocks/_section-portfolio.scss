@@ -1,0 +1,151 @@
+.section-portfolio {
+  padding-block: 80px;
+
+  @include media(up, $tablet) {
+    padding-block: 120px;
+  }
+
+  &__bar {
+    margin-block-end: 40px;
+
+    @include media(up, $tablet) {
+      display: flex;
+      justify-content: space-between;
+      margin-block-end: 60px;
+    }
+  }
+
+  &__head {
+    flex-basis: 40.31%;
+
+    @include media(down, $tablet) {
+      margin-block-end: 30px;
+    }
+  }
+
+  &__filter {
+    @include media(down, $tablet-small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @include media(down, $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    a {
+      position: relative;
+      transition: color $trs ease;
+
+      @include media(up, $tablet-small) {
+        &:after {
+          content: '';
+          height: 1px;
+          background-color: currentColor;
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          transform: scaleX(0);
+          transition: transform $trs ease-out;
+          transform-origin: right center;
+        }
+
+        &:hover {
+          color: $color-black;
+
+          &:after {
+            transform: scaleX(1);
+            transform-origin: left center;
+          }
+        }
+
+        &.active {
+          &:after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    a + a {
+      @include media(up, $tablet-small) {
+        margin-inline-start: 40px;
+      }
+    }
+  }
+
+  &__boxes {
+    @include media(up, $tablet-small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      @include media(up, $tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+        padding-block-start: 90px;
+      }
+    }
+  }
+
+  &__box {
+    &-img {
+      margin-block-end: 18px;
+      clip-path: inset(-1px);
+      will-change: clip-path;
+      animation: clipRightIn 1.75s ease;
+      opacity: 0;
+      transition-property: clip-path, transform;
+      transition-duration: 2s;
+      transition-timing-function: $transition-timing-function1;
+
+      &.visible {
+        opacity: 1;
+      }
+    }
+
+    &-head {
+      transition: transform 2s $transition-timing-function1;
+    }
+
+    &-title {
+      margin-block-end: 3px;
+    }
+
+    a {
+      img {
+        transform: rotate(0.001deg) translateZ(0);
+        transition: transform 2s $transition-timing-function1;
+      }
+
+      &:hover {
+        .section-portfolio__box-img {
+          clip-path: inset(10px);
+        }
+
+        .section-portfolio__box-head {
+          transform: scale(0.95);
+        }
+
+        img {
+          transform: scale(1.05) rotate(0.001deg) translateZ(0);
+        }
+      }
+    }
+  }
+
+  &__box:nth-child(3n + 2) {
+    @include media(up, $tablet) {
+      margin-block-start: -90px;
+    }
+  }
+
+  &__box + &__box {
+    @include media(down, $tablet-small) {
+      margin-block-start: 40px;
+    }
+  }
+}

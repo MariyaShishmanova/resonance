@@ -1,0 +1,119 @@
+.section-blog {
+  &__bar {
+    margin-block-end: 30px;
+
+    @include media(up, $tablet-small) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include media(up, $tablet) {
+      margin-block-end: 50px;
+    }
+  }
+
+  &__actions {
+    display: inline-block;
+  }
+
+  &__list {
+    @include media(up, $tablet-small) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(down, $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    border: 1px solid $color-mercury;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &-img {
+      overflow: hidden;
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+
+      a {
+        display: flex;
+      }
+
+      img {
+        transition: transform 0.5s ease;
+      }
+    }
+
+    &-body {
+      padding: 40px;
+    }
+
+    &-title {
+      margin-block: 25px 12px;
+      font-size: $text-font-size-2-mobile;
+      font-weight: 500;
+      color: $color-black;
+      transition: color $trs ease;
+
+      &:hover {
+        color: rgba($color-black, 0.6);
+      }
+
+      @include media(up, $tablet) {
+        margin-block-start: 40px;
+      }
+    }
+
+    &-entry {
+      margin-block-end: 30px;
+      font-size: $text-font-size;
+    }
+
+    &-foot {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-author {
+      font-size: 15px;
+
+      a {
+        display: flex;
+      }
+
+      &-img {
+        @include width-height(30px);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-inline-end: 10px;
+      }
+
+      &-name {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-date {
+      font-size: 15px;
+    }
+  }
+
+  &__item + &__item {
+    @include media(down, $tablet-small) {
+      margin-block-start: 50px;
+    }
+  }
+
+  img {
+    @include image-size;
+  }
+}

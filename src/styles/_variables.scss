@@ -1,0 +1,81 @@
+/**
+ *
+ * Colors
+ *
+ */
+
+$color-white: #ffffff;
+$color-black: #000;
+$color-seashell: #f1f1f1;
+$color-boulder: #757575;
+$color-mine-shaft: #333333;
+$color-alabaster: #FCFCFC ;
+$color-alto: #DDDDDD;
+$color-silver: #cccccc;
+$color-mercury: #e5e5e5;
+$color-black-pearl: #02050D;
+
+/**
+   *
+   * Font size
+   *
+   */
+
+$h1-font-size: 70px;
+$h1-font-size-mobile: 36px;
+$h2-font-size: 56px;
+$h2-font-size-mobile: 28px;
+$h3-font-size: 40px;
+$h3-font-size-mobile: 25px;
+$h4-font-size: 24px;
+$h6-font-size: 14px;
+$text-font-size: 16px;
+$text-font-size-1: 18px;
+$text-font-size-2: 23px;
+$text-font-size-2-mobile: 20px;
+$numbers-font-size: 32px;
+$buttons-mobile-font-size: 13px;
+$link-font-size: 17px;
+$quote-font-size: 46px;
+$quote-font-size-mobile: 25px;
+$numbers-font-size: 80px;
+$numbers-font-size-mobile: 49px;
+
+/**
+   *
+   * Transitions
+   *
+   */
+
+$trs: 0.3s;
+$trs1: 0.5s;
+$transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+$transition-timing-function1: cubic-bezier(0, 0.57, 0.55, 1);
+$transition-timing-function-elastic: cubic-bezier(0.68,-3,0.27,5);
+
+/**
+   *
+   * Shadows
+   *
+   */
+
+ $shadow: 2px 2px 5px 0 rgba($color-white, .6);
+
+/**
+   *
+   * Border-radius
+   *
+   */
+$border-radius: 8px;
+
+/**
+   *
+   * Break-points
+   *
+   */
+
+$desktop-big: 1400px;
+$desktop: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
