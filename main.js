@@ -1,10 +1,10 @@
 import './src/styles/main.scss';
 
 // libraries
-import 'splitting/dist/splitting.css';
-import 'splitting/dist/splitting-cells.css';
+import './node_modules/splitting/dist/splitting.css';
+import './node_modules/splitting/dist/splitting-cells.css';
 import Splitting from 'splitting';
-import 'animate.css';
+import './node_modules/animate.css';
 
 import './src/scripts/parallax';
 import './src/scripts/sliderTeam';
